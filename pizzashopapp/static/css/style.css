@@ -9,7 +9,7 @@ body {
 }
 
 .bg-red {
-  background-color: #E21E25;
+  background-color: #E31E25;
 }
 
 .text-white {
@@ -18,12 +18,12 @@ body {
 
 .btn-red {
   color: white;
-  background-color: #E21E35;
+  background-color: #E31E25;
 }
 
 .btn-red:hover,
-.btn-red:focus{
-  color:  white;
+.btn-red:focus {
+  color: white;
   background-color: #EC4D57;
 }
 
@@ -54,25 +54,25 @@ body {
   color: #ffffff;
 }
 
-/*  SIDE BAR - MENU */
+/* SIDE BAR - LIST */
 .sidebar .list-group {
   padding: 0;
   background-color: #7B2324;
 }
 
 .sidebar .list-group > span {
-  color: white;
-  display: block;;
+  color: #ffffff;
+  display: block;
   margin-top: 20px;
   padding: 20px 30px;
   font-size: 16px;
-  font-weight: 300px;
+  font-weight: 300;
 }
 
 .sidebar .list-group .list-group-item,
 .sidebar .list-group .list-group-item:focus {
   background-color: #7B2324;
-  color: white;
+  color: #ffffff;
   border: 0;
   padding-left: 60px;
   padding-right: 30px;
@@ -94,18 +94,17 @@ body {
   background-color: #E31E25;
   color: #e0deeb;
 }
-/*  SIDE BAR - LOGOUT */
 
+/* SIDE BAR - LOGOUT */
 .sidebar > div:last-child {
   padding: 30px;
 }
 
-.sidebar > div:last-child .btn{
+.sidebar > div:last-child .btn {
   width: 100%;
 }
 
-/*  SIDE BAR - CONTENT */
-
+/* CONTENT */
 .content {
   padding: 0 40px;
 }
