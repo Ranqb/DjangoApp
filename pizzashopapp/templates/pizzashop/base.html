@@ -8,21 +8,33 @@
 {% url 'pizzashop-account' as pizzashop_account_url %}
 
   <div class="text-center">
-    <img class="img-circle" src="{{ MEDIA_URL }}{{ request.user.pizzashop.logo }}" width="70" height="70">
+    <img class="img-circle" src="{{ MEDIA_URL }}{{ request.user.pizzashop.logo }}" width="70" height="70" >
     <br/>
     <br/>
-    <h4>Приветсвую, {{ request.user.get_full_name }}</h4>
+    <h4>Приветствую, {{ request.user.get_full_name }}</h4>
     <h5>{{ request.user.pizzashop.name }}</h5>
   </div>
 
   <div class="list-group">
-    <span class="text-uppercase">Панель</span>
+    <span class="text-uppercase">Информация</span>
+    <a href="{% url 'pizzashop-news' %}"
+    class="list-group-item {% if request.path ==  pizzashop_news_url %} active {% endif %}">Новости</a>
+
+    <span class="text-uppercase">Меню</span>
     <a href="{% url 'pizzashop-pizza' %}"
-    class="list-group-item {% if request.path == pizzashop_pizza_url %} active {% endif %}">Пиццы</a>
+    class="list-group-item {% if request.path ==  pizzashop_pizza_url %} active {% endif %}">Итальянская кухня</a>
+    <a href="{% url 'pizzashop-sushi' %}"
+    class="list-group-item {% if request.path ==  pizzashop_sushi_url %} active {% endif %}">Японская кухня</a>
+    <a href="{% url 'pizzashop-kavkaz' %}"
+    class="list-group-item {% if request.path ==  pizzashop_kavkaz_url %} active {% endif %}">Кавказская кухня</a>
+    <a href="{% url 'pizzashop-russia' %}"
+    class="list-group-item {% if request.path ==  pizzashop_russia_url %} active {% endif %}">Русская кухня</a>
+    <a href="{% url 'pizzashop-china' %}"
+    class="list-group-item {% if request.path ==  pizzashop_china_url %} active {% endif %}">Китайская кухня</a>
 
     <span class="text-uppercase">Профиль</span>
     <a href="{% url 'pizzashop-account' %}"
-    class="list-group-item {% if request.path == pizzashop_account_url %} active {% endif %}">Профиль</a>
+    class="list-group-item {% if request.path ==  pizzashop_account_url %} active {% endif %}">Профиль</a>
   </div>
 
   <div class="text-center">

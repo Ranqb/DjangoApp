@@ -1,0 +1,40 @@
+{% extends 'pizzashop/base.html' %}
+
+{% block page %}
+<div class="panel">
+  <div class="panel-heading bg-ruby">
+    <h4 class="panel-title text-center text-white">
+      Китайская кухня
+    </h4>
+  </div>
+  <div class="panel-body">
+    <div class="text-right">
+      <a href="{% url 'pizzashop-add-china' %}"class="btn btn-red">Добавить</a>
+      <br/>
+      <br/>
+    </div>
+    <table class="table table-bordered table-hover table-striped">
+      <thead>
+        <tr class="bg-red text-white">
+          <th>ID</th>
+          <th>Название</th>
+          <th>Короткое описание</th>
+          <th>Цена</th>
+          <th class="text-center">Изображение</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for china in chinas %}
+          <tr>
+            <td scope="row">{{ china.id }}</td>
+            <td><a href="{% url 'pizzashop-edit-china' china.id %}">{{ china.name }}</a></td>
+            <td>{{ china.short_description }}</td>
+            <td>{{ china.price }}</td>
+            <td class="text-center"><img class="img-rounded" src="{{ MEDIA_URL }}{{ china.image }}" width = "150"></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
