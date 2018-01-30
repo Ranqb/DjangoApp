@@ -25,7 +25,7 @@ SECRET_KEY = '$(&h%i-0kfwbl-_qlx0hio7zoh_2m+_(lexl3wh^@-3g@)$r5f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stormy-wave-28841.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['vast-forest-98127.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
