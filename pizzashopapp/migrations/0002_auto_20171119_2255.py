@@ -26,22 +26,22 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='pizzashop',
             name='address',
-            field=models.CharField(max_length=100, verbose_name='Адрес'),
+            field=models.CharField(max_length=100),
         ),
         migrations.AlterField(
             model_name='pizzashop',
             name='logo',
-            field=models.ImageField(upload_to='pizzashop_logo/', verbose_name='Логотип'),
+            field=models.ImageField(upload_to='pizzashop_logo/'),
         ),
         migrations.AlterField(
             model_name='pizzashop',
             name='name',
-            field=models.CharField(max_length=100, verbose_name='Название'),
+            field=models.CharField(max_length=100),
         ),
         migrations.AlterField(
             model_name='pizzashop',
             name='phone',
-            field=models.CharField(max_length=100, verbose_name='Телефон'),
+            field=models.CharField(max_length=100),
         ),
         migrations.AddField(
             model_name='pizza',
